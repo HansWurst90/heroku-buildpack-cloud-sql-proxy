@@ -9,12 +9,12 @@ ENV_DIR=$3
 # echo "Jan"
 # value=`cat $ENV_DIR"/DB_HOST"`
 # echo "$value"
-echo "GCLOUD_CREDENTIALS"
-GCLOUD_CREDENTIALS=`cat $ENV_DIR"/GCLOUD_CREDENTIALS"`
-echo $GCLOUD_CREDENTIALS
-echo "GCLOUD_INSTANCE"
-GCLOUD_INSTANCE=`cat $ENV_DIR"/GCLOUD_INSTANCE"`
-echo $GCLOUD_INSTANCE
+#echo "GCLOUD_CREDENTIALS"
+#GCLOUD_CREDENTIALS=`cat $ENV_DIR"/GCLOUD_CREDENTIALS"`
+#echo $GCLOUD_CREDENTIALS
+#echo "GCLOUD_INSTANCE"
+#GCLOUD_INSTANCE=`cat $ENV_DIR"/GCLOUD_INSTANCE"`
+#echo $GCLOUD_INSTANCE
 
 if [ ! -f $CACHE_DIR/cloud_sql_proxy ]; then
 	echo "-----> Downloading cloud_sql_proxy"
@@ -36,11 +36,16 @@ fi
 
 if [ -f $ENV_DIR/GSP_CREDENTIALS ]; then
 	echo "-----> Adding credentials JSON"
+	echo "GSP_CREDENTIALS"
+	echo $ENV_DIR/GSP_CREDENTIALS
 	cp $ENV_DIR/GSP_CREDENTIALS $BUILD_DIR/google/credentials.json
 fi
 
 # echo "-----> Create socket dir"
 # mkdir -p /cloudsql
+
+echo "GSP_CREDENTIALS"
+echo \$GSP_INSTANCES
 
 cat >$BUILD_DIR/bin/run_cloud_sql_proxy <<EOF
 #!/bin/sh
