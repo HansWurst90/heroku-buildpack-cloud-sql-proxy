@@ -23,6 +23,8 @@ done
 echo "DB_HOST"
 echo "$ENV_DIR"/DB_HOST
 echo $ENV_DIR"/DB_HOST"
+value=`cat $ENV_DIR"/DB_HOST"`
+echo "$value"
 echo "GCLOUD_CREDENTIALS"
 echo $GCLOUD_CREDENTIALS
 echo "GCLOUD_INSTANCE"
