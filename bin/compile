@@ -7,28 +7,12 @@ CACHE_DIR=$2
 ENV_DIR=$3
 
 echo "Jan"
-
-echo "BUILD_DIR"
-echo $BUILD_DIR
-echo "CACHE_DIR"
-echo $CACHE_DIR
-echo "ENV_DIR"
-echo $ENV_DIR
-echo "list:"
-for entry in "$ENV_DIR"/*
-do
-  echo "$entry"
-done
-
-echo "DB_HOST"
-echo "$ENV_DIR"/DB_HOST
-echo $ENV_DIR"/DB_HOST"
 value=`cat $ENV_DIR"/DB_HOST"`
 echo "$value"
 echo "GCLOUD_CREDENTIALS"
-echo $GCLOUD_CREDENTIALS
+echo $BUILD_DIR/GCLOUD_CREDENTIALS
 echo "GCLOUD_INSTANCE"
-echo $GCLOUD_INSTANCE
+echo $BUILD_DIR/GCLOUD_INSTANCE
 
 if [ ! -f $CACHE_DIR/cloud_sql_proxy ]; then
 	echo "-----> Downloading cloud_sql_proxy"
