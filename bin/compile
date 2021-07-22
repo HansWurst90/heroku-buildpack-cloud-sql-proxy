@@ -20,6 +20,8 @@ do
   echo "$entry"
 done
 
+echo "DB_HOST"
+echo $DB_HOST
 echo "GCLOUD_CREDENTIALS"
 echo $GCLOUD_CREDENTIALS
 echo "GCLOUD_INSTANCE"
