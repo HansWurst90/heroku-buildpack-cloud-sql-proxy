@@ -21,7 +21,8 @@ do
 done
 
 echo "DB_HOST"
-echo $DB_HOST
+echo "$ENV_DIR"/DB_HOST
+echo $ENV_DIR"/DB_HOST"
 echo "GCLOUD_CREDENTIALS"
 echo $GCLOUD_CREDENTIALS
 echo "GCLOUD_INSTANCE"
