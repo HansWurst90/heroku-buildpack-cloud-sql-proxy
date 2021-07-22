@@ -14,6 +14,11 @@ echo "CACHE_DIR"
 echo $CACHE_DIR
 echo "ENV_DIR"
 echo $ENV_DIR
+echo "list:"
+for entry in "$ENV_DIR"/*
+do
+  echo "$entry"
+done
 
 echo "GCLOUD_CREDENTIALS"
 echo $GCLOUD_CREDENTIALS
