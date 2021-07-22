@@ -37,15 +37,15 @@ fi
 if [ -f $ENV_DIR/GSP_CREDENTIALS ]; then
 	echo "-----> Adding credentials JSON"
 	echo "GSP_CREDENTIALS"
-	echo $ENV_DIR/GSP_CREDENTIALS
 	cp $ENV_DIR/GSP_CREDENTIALS $BUILD_DIR/google/credentials.json
+	echo `cat $BUILD_DIR/google/credentials.json`
 fi
 
 # echo "-----> Create socket dir"
 # mkdir -p /cloudsql
 
 echo "GSP_CREDENTIALS"
-echo \$GSP_INSTANCES
+echo `cat \$GSP_INSTANCES`
 
 cat >$BUILD_DIR/bin/run_cloud_sql_proxy <<EOF
 #!/bin/sh
