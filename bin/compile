@@ -10,9 +10,11 @@ echo "Jan"
 value=`cat $ENV_DIR"/DB_HOST"`
 echo "$value"
 echo "GCLOUD_CREDENTIALS"
-echo $BUILD_DIR/GCLOUD_CREDENTIALS
+GCLOUD_CREDENTIALS=`cat $ENV_DIR"/GCLOUD_CREDENTIALS"`
+echo $GCLOUD_CREDENTIALS
 echo "GCLOUD_INSTANCE"
-echo $BUILD_DIR/GCLOUD_INSTANCE
+GCLOUD_INSTANCE=`cat $ENV_DIR"/GCLOUD_INSTANCE"`
+echo $GCLOUD_INSTANCE
 
 if [ ! -f $CACHE_DIR/cloud_sql_proxy ]; then
 	echo "-----> Downloading cloud_sql_proxy"
