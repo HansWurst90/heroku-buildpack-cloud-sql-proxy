@@ -24,6 +24,11 @@ if [ ! -d $BUILD_DIR/bin ]; then
 	mkdir $BUILD_DIR/bin
 fi
 
+echo "$GCLOUD_CREDENTIALS"
+echo $GCLOUD_CREDENTIALS
+echo "$GCLOUD_INSTANCE"
+echo $GCLOUD_INSTANCE
+
 cat >$BUILD_DIR/bin/run_cloud_sql_proxy <<EOF
 #!/bin/sh
 echo "-----> Adding credentials JSON"
