@@ -9,11 +9,11 @@ ENV_DIR=$3
 echo "Jan"
 
 echo "BUILD_DIR"
-echo BUILD_DIR
+echo $BUILD_DIR
 echo "CACHE_DIR"
-echo CACHE_DIR
+echo $CACHE_DIR
 echo "ENV_DIR"
-echo ENV_DIR
+echo $ENV_DIR
 
 echo "GCLOUD_CREDENTIALS"
 echo $GCLOUD_CREDENTIALS
